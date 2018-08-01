@@ -8,6 +8,8 @@ I am Yii
 Android-Tutorial
 ================
 
-*   [ConstraintLayout - 20180705](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/ConstraintLayout)
-    *   [https://www.youtube.com/watch?v=MqzJkBswFYg&t=383s](https://www.youtube.com/watch?v=MqzJkBswFYg&t=383s)
+*   [ConstraintLayout part1 - 20180704](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/ConstraintLayout)
+    *   [https://youtu.be/MqzJkBswFYg](https://youtu.be/MqzJkBswFYg)
+*   [ConstraintLayout part2 - 20180707](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/ConstraintLayout)
+    *   [https://youtu.be/fHfUFg634no](https://youtu.be/fHfUFg634no)
 
