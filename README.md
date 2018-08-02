@@ -12,4 +12,6 @@ Android-Tutorial
     *   [https://youtu.be/MqzJkBswFYg](https://youtu.be/MqzJkBswFYg)
 *   [ConstraintLayout part2 - 20180707](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/ConstraintLayout)
     *   [https://youtu.be/fHfUFg634no](https://youtu.be/fHfUFg634no)
+*   [Notification - 20180802](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/Notification)
+    *   [https://youtu.be/-091o-a-B7M](https://youtu.be/-091o-a-B7M)
 
