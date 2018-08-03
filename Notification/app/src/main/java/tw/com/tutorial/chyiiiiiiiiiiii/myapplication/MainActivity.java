@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
+import androidx.core.app.RemoteInput;
 import androidx.core.content.ContextCompat;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,7 +40,15 @@ public class MainActivity extends AppCompatActivity {
         createNotificationChannel(CHANNEL_ID_FOOD, CHANNEL_NAME_FOOD, CHANNEL_DESCRIPTION_FOOD);
         // 發出通知
         sendNotification("Hello", "I am Yii", "How are you?", CHANNEL_ID_FOOD, 1);
+        //
+//        sendButtonNotification();
+//        sendBigTextNotification();
+//        sendBigPictureNotification();
+//        sendBoxNotification();
+//        sendMessagesNotification();
+        sendInputNotification();
     }
+
 
     /**
      * 建立群組
@@ -83,8 +92,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+
+    //-----------------------------------------------------------------------------------------------------------------------------------------------------
+
     /**
-     * 發出通知
+     * 發出一般通知
      *
      * @param ticker
      * @param title
@@ -104,18 +117,128 @@ public class MainActivity extends AppCompatActivity {
         builder.setTicker(ticker);
         builder.setContentTitle(title);
         builder.setContentText(content);
+        builder.setColor(ContextCompat.getColor(this, R.color.colorAccent));
         builder.setSmallIcon(R.drawable.ic_launcher_foreground);
         builder.setLargeIcon(BitmapFactory.decodeResource(this.getResources(), R.drawable.ic_launcher_foreground));
         builder.setWhen(System.currentTimeMillis());
+        // 超時銷毀
+//        builder.setTimeoutAfter(10 * 1000);
         builder.setAutoCancel(true);
         builder.setPriority(NotificationCompat.PRIORITY_MAX);
         builder.setOngoing(false);
+        // 角標類型
+        builder.setBadgeIconType(NotificationCompat.BADGE_ICON_NONE);
+        // 訊息數量
+//        builder.setNumber(10);
+        // 進度條，(3)indeterminate - true模糊、false進度
+//        builder.setProgress(100, 50, false);
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, notifyId, intent, PendingIntent.FLAG_ONE_SHOT);
         builder.setContentIntent(pendingIntent);
         /// 送出通知
         manager.notify(notifyId, builder.build());
+    }
+
+    public NotificationCompat.Builder getSimpleBuilder(String channelId, String title, String content) {
+        NotificationCompat.Builder builder;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            builder = new NotificationCompat.Builder(this, channelId);
+        } else {
+            builder = new NotificationCompat.Builder(this);
+        }
+        builder.setContentTitle(title);
+        builder.setContentText(content);
+        builder.setSmallIcon(R.drawable.ic_launcher_foreground);
+        return builder;
+    }
+
+    /**
+     * 有按鈕的通知
+     */
+    public void sendButtonNotification() {
+        NotificationCompat.Builder builder = getSimpleBuilder(CHANNEL_ID_FOOD, "20180803", "I am Yii");
+        //
+        NotificationCompat.Action action = new NotificationCompat.Action(R.drawable.ic_good, "Yes", null);
+        builder.addAction(action);
+        //
+        manager.notify(1, builder.build());
+    }
+
+    /**
+     * 多文字的通知
+     */
+    public void sendBigTextNotification() {
+        NotificationCompat.Builder builder = getSimpleBuilder(CHANNEL_ID_FOOD, "20180803", "I am Yii");
+        //
+        NotificationCompat.BigTextStyle style = new NotificationCompat.BigTextStyle();
+        style.setBigContentTitle("aaa");
+        style.bigText("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+        style.setSummaryText("ccc");
+        builder.setStyle(style);
+        //
+        manager.notify(2, builder.build());
+    }
+
+
+    /**
+     * 大圖片的通知
+     */
+    public void sendBigPictureNotification() {
+        NotificationCompat.Builder builder = getSimpleBuilder(CHANNEL_ID_FOOD, "20180803", "I am Yii");
+        //
+        NotificationCompat.BigPictureStyle style = new NotificationCompat.BigPictureStyle();
+        style.bigLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.android));
+        style.bigPicture(BitmapFactory.decodeResource(getResources(), R.drawable.android));
+        builder.setStyle(style);
+        //
+        manager.notify(3, builder.build());
+    }
+
+    /**
+     * 列表型的通知
+     */
+    public void sendBoxNotification() {
+        NotificationCompat.Builder builder = getSimpleBuilder(CHANNEL_ID_FOOD, "20180803", "I am Yii");
+        //
+        NotificationCompat.InboxStyle style = new NotificationCompat.InboxStyle();
+        style.addLine("你好");
+        style.addLine("我是Yii");
+        builder.setStyle(style);
+        //
+        manager.notify(4, builder.build());
+    }
+
+    /**
+     * 進階列表型的通知
+     */
+    public void sendMessagesNotification() {
+        NotificationCompat.Builder builder = getSimpleBuilder(CHANNEL_ID_FOOD, "20180803", "I am Yii");
+        //
+        NotificationCompat.MessagingStyle style = new NotificationCompat.MessagingStyle("AAA").setConversationTitle("This is Messaging");
+        style.addMessage(new NotificationCompat.MessagingStyle.Message("你好", System.currentTimeMillis(), "Yii"));
+        style.addMessage(new NotificationCompat.MessagingStyle.Message("我是阿逸", System.currentTimeMillis(), "Yii"));
+        style.addMessage(new NotificationCompat.MessagingStyle.Message("很高興認識你", System.currentTimeMillis(), "Yii"));
+        builder.setStyle(style);
+        //
+        manager.notify(5, builder.build());
+    }
+
+    /**
+     * 輸入框的通知
+     */
+    public void sendInputNotification() {
+        NotificationCompat.Builder builder = getSimpleBuilder(CHANNEL_ID_FOOD, "20180803", "I am Yii");
+        //
+        RemoteInput remoteInput = new RemoteInput.Builder("data").setLabel("請輸入").build();
+        //
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 6, new Intent(this, RemoteInputReceiver.class), PendingIntent.FLAG_UPDATE_CURRENT);
+        //
+        NotificationCompat.Action action = new NotificationCompat.Action.Builder(R.drawable.ic_music, "Send", pendingIntent).addRemoteInput(remoteInput).build();
+        //
+        builder.addAction(action);
+        //
+        manager.notify(6, builder.build());
     }
 
     //-----------------------------------------------------------------------------------------------------------------------------------------------------
