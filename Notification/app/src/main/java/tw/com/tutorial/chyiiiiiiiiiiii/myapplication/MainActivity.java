@@ -1,11 +1,15 @@
 package tw.com.tutorial.chyiiiiiiiiiiii.myapplication;
 
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationChannelGroup;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.media.MediaMetadata;
+import android.media.session.MediaSession;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -234,7 +238,10 @@ public class MainActivity extends AppCompatActivity {
         //
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 6, new Intent(this, RemoteInputReceiver.class), PendingIntent.FLAG_UPDATE_CURRENT);
         //
-        NotificationCompat.Action action = new NotificationCompat.Action.Builder(R.drawable.ic_music, "Send", pendingIntent).addRemoteInput(remoteInput).build();
+        NotificationCompat.Action action = new NotificationCompat.Action.Builder(R.drawable.ic_music, "Send", pendingIntent)
+                .addRemoteInput(remoteInput)
+                .setAllowGeneratedReplies(true) // 允許Android Wear 2.0生成智能回復
+                .build();
         //
         builder.addAction(action);
         //
