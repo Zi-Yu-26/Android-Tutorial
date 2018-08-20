@@ -14,4 +14,8 @@ Android-Tutorial
     *   [https://youtu.be/fHfUFg634no](https://youtu.be/fHfUFg634no)
 *   [Notification - 20180802](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/Notification)
     *   [https://youtu.be/-091o-a-B7M](https://youtu.be/-091o-a-B7M)
+*   [Notification part2 - 20180808](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/Notification)
+    *   [https://youtu.be/MGa_6FBe9a0](https://youtu.be/MGa_6FBe9a0)
+*   [Location - 20180820](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/Location)
+    *   [https://youtu.be/3b3nR-besaU](https://youtu.be/3b3nR-besaU)
 
