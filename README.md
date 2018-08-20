@@ -12,10 +12,10 @@ Android-Tutorial
     *   [https://youtu.be/MqzJkBswFYg](https://youtu.be/MqzJkBswFYg)
 *   [ConstraintLayout part2 - 20180707](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/ConstraintLayout)
     *   [https://youtu.be/fHfUFg634no](https://youtu.be/fHfUFg634no)
-*   [Notification - 20180802](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/Notification)
+*   [8.0以上如何使用Notification通知？ - 20180802](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/Notification)
     *   [https://youtu.be/-091o-a-B7M](https://youtu.be/-091o-a-B7M)
-*   [Notification part2 - 20180808](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/Notification)
+*   [各式各樣的Notification通知！ - 20180808](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/Notification)
     *   [https://youtu.be/MGa_6FBe9a0](https://youtu.be/MGa_6FBe9a0)
-*   [Location - 20180820](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/Location)
+*   [如何取得手機的Location位置(經緯度)？ - 20180820](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/Location)
     *   [https://youtu.be/3b3nR-besaU](https://youtu.be/3b3nR-besaU)
 
