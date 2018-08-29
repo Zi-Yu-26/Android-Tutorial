@@ -18,4 +18,6 @@ Android-Tutorial
     *   [https://youtu.be/MGa_6FBe9a0](https://youtu.be/MGa_6FBe9a0)
 *   [如何取得手機的Location位置(經緯度)？ - 20180820](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/Location)
     *   [https://youtu.be/3b3nR-besaU](https://youtu.be/3b3nR-besaU)
+*   [透過 FusedLocationProvider - API 取得更精準的位置(經緯度)？ - 20180829](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/FusedLocationProvider)
+    *   [https://youtu.be/3TF3WpKuD5Q](https://youtu.be/3TF3WpKuD5Q)
 
