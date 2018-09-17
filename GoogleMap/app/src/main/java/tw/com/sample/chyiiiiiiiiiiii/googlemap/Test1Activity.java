@@ -1,35 +1,42 @@
 package tw.com.sample.chyiiiiiiiiiiii.googlemap;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.annotation.SuppressLint;
 
-import android.os.Bundle;
-
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.CameraPosition;
 
-public class Test1Activity extends AppCompatActivity implements OnMapReadyCallback {
-
-    private GoogleMap mMap;
+public class Test1Activity extends MapActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test1);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+    protected void onMapReady() {
+        setMap();
     }
 
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    /**
+     * setMapType - 5種
+     *  Normal：典型的地圖
+     *  Hybrid：混合衛星照片及道路地圖
+     *  Satellite：衛星照片
+     *  Terrain：地形圖
+     *  None：什麼都沒有
+     */
+    @SuppressLint("MissingPermission")
+    private void setMap() {
+        getMap().setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        getMap().setMyLocationEnabled(true);
+        //
+        moveCamera();
     }
+
+    public void moveCamera() {
+        getMap().moveCamera(CameraUpdateFactory.newLatLng(Data.POSITION_TAIPEI101));
+        getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(Data.POSITION_TAIPEI_TRAIN_STATION, 12));
+        getMap().animateCamera(CameraUpdateFactory.zoomTo(8));
+        //
+        CameraPosition cameraPosition = new CameraPosition.Builder().target(Data.POSITION_KENTING).bearing(120).tilt(30).zoom(13).build();
+        getMap().animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+    }
+
 }
