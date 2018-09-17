@@ -20,4 +20,6 @@ Android-Tutorial
     *   [https://youtu.be/3b3nR-besaU](https://youtu.be/3b3nR-besaU)
 *   [透過 FusedLocationProvider - API 取得更精準的位置(經緯度)？ - 20180829](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/FusedLocationProvider)
     *   [https://youtu.be/3TF3WpKuD5Q](https://youtu.be/3TF3WpKuD5Q)
+*   [如何使用 Google Map ？ 取得 API KEY ？ - 20180906](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/GoogleMap)
+    *   [https://youtu.be/I9YLKjDeNK4](https://youtu.be/I9YLKjDeNK4)
 
