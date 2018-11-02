@@ -22,4 +22,8 @@ Android-Tutorial
     *   [https://youtu.be/3TF3WpKuD5Q](https://youtu.be/3TF3WpKuD5Q)
 *   [如何使用 Google Map ？ 取得 API KEY ？ - 20180906](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/GoogleMap)
     *   [https://youtu.be/I9YLKjDeNK4](https://youtu.be/I9YLKjDeNK4)
+*   [移動 Google Map 鏡頭的方式！ - 20180916](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/GoogleMap)
+    *   [https://youtu.be/z5eVnmPyO9E](https://youtu.be/z5eVnmPyO9E)
+*   [如何在 Google Map 上添加標記呢？ - 20180921](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/GoogleMap)
+    *   [https://youtu.be/_7mH7MPuQyM](https://youtu.be/_7mH7MPuQyM)
 
