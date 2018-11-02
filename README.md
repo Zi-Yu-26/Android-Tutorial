@@ -26,4 +26,6 @@ Android-Tutorial
     *   [https://youtu.be/z5eVnmPyO9E](https://youtu.be/z5eVnmPyO9E)
 *   [如何在 Google Map 上添加標記呢？ - 20180921](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/GoogleMap)
     *   [https://youtu.be/_7mH7MPuQyM](https://youtu.be/_7mH7MPuQyM)
+*   [如何更改 Google Map 的風格呢？ - 20181102](https://github.com/chyiiiiiiiiiiii/Android-Tutorial/tree/master/GoogleMap)
+    *   [https://youtu.be/Ub1-Pdui5qk](https://youtu.be/Ub1-Pdui5qk)
 
