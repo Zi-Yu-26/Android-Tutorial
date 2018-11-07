@@ -1,4 +1,4 @@
-package tw.com.sample.chyiiiiiiiiiiii.googlemap;
+package tw.com.sample.chyiiiiiiiiiiii.googlemap.activity;
 
 import android.widget.Toast;
 
@@ -12,6 +12,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
 
+import tw.com.sample.chyiiiiiiiiiiii.googlemap.Data;
 import tw.com.sample.chyiiiiiiiiiiii.googlemap.adapter.MapInfoWindowAdapter;
 
 public class Test2Activity extends MapActivity implements GoogleMap.OnMarkerClickListener, GoogleMap.OnInfoWindowClickListener {

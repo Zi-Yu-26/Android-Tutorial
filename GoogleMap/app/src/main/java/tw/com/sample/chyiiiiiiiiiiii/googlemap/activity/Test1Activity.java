@@ -1,11 +1,12 @@
-package tw.com.sample.chyiiiiiiiiiiii.googlemap;
+package tw.com.sample.chyiiiiiiiiiiii.googlemap.activity;
 
 import android.annotation.SuppressLint;
 
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.CameraPosition;
+
+import tw.com.sample.chyiiiiiiiiiiii.googlemap.Data;
 
 public class Test1Activity extends MapActivity {
 

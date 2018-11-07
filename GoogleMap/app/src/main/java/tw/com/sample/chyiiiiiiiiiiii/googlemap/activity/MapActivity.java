@@ -1,4 +1,4 @@
-package tw.com.sample.chyiiiiiiiiiiii.googlemap;
+package tw.com.sample.chyiiiiiiiiiiii.googlemap.activity;
 
 import android.os.Bundle;
 
@@ -8,6 +8,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
 import androidx.appcompat.app.AppCompatActivity;
+import tw.com.sample.chyiiiiiiiiiiii.googlemap.R;
 
 public abstract class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
